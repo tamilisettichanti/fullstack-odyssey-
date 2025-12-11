@@ -30,7 +30,7 @@ const HeroSection = () => {
             filter: "blur(100px)",
           }}
         />
-        
+
         {/* Floating orbs */}
         <div
           className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full pulse-glow"
@@ -49,7 +49,7 @@ const HeroSection = () => {
             animationDelay: "1s",
           }}
         />
-        
+
         {/* Grid pattern overlay */}
         <div
           className="absolute inset-0 opacity-10"
@@ -86,7 +86,8 @@ const HeroSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
-                href="#"
+                href="/5N6@Chanti.pdf"
+                download="Chanti_Resume"
                 className="group glass-card px-8 py-4 flex items-center justify-center gap-3 glow-button animate-glow-pulse border-primary/30"
               >
                 <Download className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
@@ -94,6 +95,7 @@ const HeroSection = () => {
                   Download Resume
                 </span>
               </a>
+
               <a
                 href="#projects"
                 className="group glass-card px-8 py-4 flex items-center justify-center gap-3 hover:border-secondary/30"
@@ -117,7 +119,7 @@ const HeroSection = () => {
             <div className="relative w-72 h-72 sm:w-96 sm:h-96 mx-auto">
               {/* Outer glow ring */}
               <div className="absolute inset-0 rounded-full bg-neon-gradient opacity-20 blur-3xl animate-pulse" />
-              
+
               {/* Inner glass orb */}
               <div className="absolute inset-4 rounded-full glass-panel border-2 border-primary/30 animate-glow-pulse flex items-center justify-center">
                 <div className="text-center">

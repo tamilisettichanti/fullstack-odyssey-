@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
+/* --- Social Links (UPDATED) --- */
 const socialLinks = [
   {
     name: "GitHub",
@@ -12,13 +13,13 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/tamilisetti-chanti/",
     color: "hover:text-blue-400",
   },
   {
     name: "Email",
     icon: Mail,
-    href: "mailto:contact@chanti.dev",
+    href: "mailto:tamilisettichanti@gmail.com",
     color: "hover:text-primary",
   },
 ];
@@ -36,17 +37,12 @@ const ContactSection = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
+        if (entry.isIntersecting) setIsVisible(true);
       },
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
@@ -54,7 +50,7 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
+    // Simulated 1.5s delay
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
     toast({
@@ -81,7 +77,7 @@ const ContactSection = () => {
       ref={sectionRef}
       className="py-24 relative overflow-hidden"
     >
-      {/* Background accent */}
+      {/* Background Accent */}
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-radial from-secondary/5 to-transparent pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -102,13 +98,9 @@ const ContactSection = () => {
           <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
             {/* Contact Form */}
             <div className="relative group">
-              {/* Animated border */}
               <div className="absolute -inset-0.5 rounded-2xl bg-neon-gradient opacity-30 blur-sm group-hover:opacity-50 transition-opacity duration-500 animate-gradient" />
 
-              <form
-                onSubmit={handleSubmit}
-                className="relative glass-card space-y-6"
-              >
+              <form onSubmit={handleSubmit} className="relative glass-card space-y-6">
                 <div>
                   <label
                     htmlFor="name"
@@ -186,12 +178,13 @@ const ContactSection = () => {
               </form>
             </div>
 
-            {/* Social Links & Info */}
+            {/* Social Links + Download */}
             <div className="flex flex-col justify-center">
               <div className="glass-card mb-8">
                 <h3 className="text-2xl font-display font-semibold text-foreground mb-6">
                   Let's Connect
                 </h3>
+
                 <p className="font-body text-muted-foreground mb-8 leading-relaxed">
                   I'm always open to discussing new projects, creative ideas, or
                   opportunities to be part of your vision. Feel free to reach out
@@ -213,9 +206,10 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              {/* Download Resume Card */}
+              {/* Resume Download Card */}
               <a
-                href="#"
+                href="/5N6@Chanti.pdf"
+                download="Chanti_Resume"
                 className="group glass-card flex items-center gap-4 hover:border-primary/30 animate-glow-pulse"
               >
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">

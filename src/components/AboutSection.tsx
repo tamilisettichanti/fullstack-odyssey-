@@ -51,7 +51,7 @@ const AboutSection = () => {
       ref={sectionRef}
       className="py-24 relative overflow-hidden"
     >
-      {/* Background accent */}
+
       <div className="absolute top-1/2 left-0 w-1/2 h-1/2 -translate-y-1/2 bg-gradient-radial from-primary/5 to-transparent pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -66,7 +66,7 @@ const AboutSection = () => {
           <div className="w-24 h-1 bg-neon-gradient mx-auto mb-16 rounded-full" />
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
+
             <div className="glass-card">
               <h3 className="text-2xl font-display font-semibold text-primary mb-6">
                 Who I Am
